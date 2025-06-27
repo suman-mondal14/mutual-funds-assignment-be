@@ -1,4 +1,3 @@
-// models/user-model.js
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -36,7 +35,7 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-// 🔐 Password Hashing Middleware
+// Password Hashing Middleware
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
 
@@ -49,7 +48,7 @@ userSchema.pre("save", async function (next) {
   }
 });
 
-// 🔐 JWT Token Generation Method
+// JWT Token Generation Method
 userSchema.methods.generateToken = function () {
   try {
     const token = jwt.sign(
