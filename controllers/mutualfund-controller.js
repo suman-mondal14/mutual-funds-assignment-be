@@ -1,3 +1,4 @@
+//Save mutual funds
 import MutualFund from "../models/mutualfund-model.js";
 
 export const saveFund = async (req, res) => {
@@ -23,6 +24,7 @@ export const saveFund = async (req, res) => {
   }
 };
 
+//get mutual fund by user ID
 export const getFundsByUser = async (req, res) => {
   try {
     const { userId } = req.params;

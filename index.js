@@ -1,4 +1,3 @@
-// index.js
 import express from "express";
 import "dotenv/config";
 import connectDB from "./utils/db.js";
